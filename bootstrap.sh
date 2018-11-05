@@ -3,6 +3,7 @@ command -v puppet > /dev/null && { echo "Puppet is installed! skipping" ; exit 0
 
 ID=$(cat /etc/os-release | awk -F= '/^ID=/{print $2}' | tr -d '"')
 VERS=$(cat /etc/os-release | awk -F= '/^VERSION_ID=/{print $2}' | tr -d '"')
+yum install -y wget
 
 case "${ID}" in
   centos|rhel)
