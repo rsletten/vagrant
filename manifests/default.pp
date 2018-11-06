@@ -2,10 +2,11 @@
 node default {
   include bla
   include stdlib
-  logrotate::rule { 'messages':
-    path         => '/var/log/messages',
-    rotate       => 5,
-    rotate_every => 'week',
-    postrotate   => '/usr/bin/killall -HUP syslogd',
-  }
+  #include logrotate
+  #logrotate::rule { 'messages':
+  #  path         => '/var/log/messages',
+  #  rotate       => 5,
+  #  rotate_every => 'week',
+  #  postrotate   => '/usr/bin/killall -HUP syslogd',
+  #}
 }
