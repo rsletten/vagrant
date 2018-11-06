@@ -2,7 +2,7 @@
 node default {
   include bla
   include stdlib
-  #include logrotate
+  include logrotate
   #logrotate::rule { 'messages':
   #  path         => '/var/log/messages',
   #  rotate       => 5,
