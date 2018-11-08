@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
+  config.vm.synced_folder "data", "/tmp/vagrant-puppet/data"
   ####### Install Puppet Agent #######
   config.vm.provision "shell", path: "./bootstrap.sh"
   ####### Do Puppet #######
@@ -14,7 +15,7 @@ Vagrant.configure("2") do |config|
       "vagrant" => "1"
     }
     puppet.hiera_config_path = "hiera.yaml"
-    puppet.working_directory = "/vagrant"
+    puppet.working_directory = "/tmp/vagrant-puppet"
     # puppet.options = "--verbose --debug"
     # puppet.environment_path = "../puppet/environments"
     # puppet.environment = "testenv"
