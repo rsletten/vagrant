@@ -1,2 +1,9 @@
 ---
 bla::wassup: "yeah boi"
+logrotate::rules:
+  rob:
+    path: '/var/log/rob'
+    missingok: true
+    ifempty: false
+    size: '1k' 
+    create: true
