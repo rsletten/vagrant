@@ -1,4 +1,9 @@
 ---
+lookup_options:
+  logrotate::rules:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
 bla::wassup: "yeah boi"
 logrotate::rules:
   rob:
