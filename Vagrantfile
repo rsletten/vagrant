@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
     puppet.facter = {
       "vagrant" => "1"
     }
-    # puppet.hiera_config_path = "hiera.yaml"
+    puppet.hiera_config_path = "hiera.yaml"
+    puppet.working_directory = "/vagrant"
     # puppet.options = "--verbose --debug"
     # puppet.environment_path = "../puppet/environments"
     # puppet.environment = "testenv"

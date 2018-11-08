@@ -1,8 +1,10 @@
 # init.pp
-class bla {
+class bla(
+  String $wassup = undef
+) {
 
   notify{ 'Bla':
-    message => 'Bla!';
+    message => $wassup
   }
 
 }
