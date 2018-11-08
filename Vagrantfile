@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
-  config.vm.synced_folder "data", "/tmp/vagrant-puppet/data"
+  config.vm.synced_folder "hieradata", "/tmp/vagrant-puppet/hieradata"
   ####### Install Puppet Agent #######
   config.vm.provision "shell", path: "./bootstrap.sh"
   ####### Do Puppet #######
