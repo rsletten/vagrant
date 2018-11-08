@@ -1,0 +1,8 @@
+---
+logrotate::rules:
+  rob4:
+    path: '/var/log/rob4'
+    missingok: true
+    ifempty: false
+    size: '1k' 
+    create: true

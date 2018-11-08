@@ -8,5 +8,7 @@ hierarchy:
     path: "nodes/%{trusted.certname}.yaml"
   - name: "osfamily"
     path: "os/%{facts.os.family}.yaml"
+  - name: "entities"
+    path: "entities/%{entity}.yaml"
   - name: "common"
     path: "common.yaml"
